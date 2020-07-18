@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey-Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title" class="jumbotron text-center">Questionnaire</h1>
+            <p  class="h3 text-center" id="description">Input correct data, please</p>
+        </header>
+        <form id="survey-form" class="">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" class="form-control " id="name" placeholder="... name" required>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com"
+                    required>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age(optional)</label>
+                <input type="number" class="form-control" id="number" name="age" min="10" max="99" placeholder="Age"
+                    required>
+            </div>
+            <div class="dropdown">
+                <label for="dropdown">What's your hobby?</label>
+                <input type="text" id="dropdown" class="form-control" name="role" list="l1" required>
+                <datalist id="l1">
+                    <option>Ski</option>
+                    <option>Jogging</option>
+                    <option>Soccer</option>
+                    <option>TV</option>
+                    <option>Reading</option>
+                    <option>Computer Game</option>
+                </datalist>
+            </div>
+            <div class="form-check">
+                <p class="h4">Where are you from?</p>
+                <label>
+                    <input name="continent" class="form-check-input" value="north-america" type="radio"
+                        class="input-radio" checked />North America</label>
+                <label>
+                    <input name="continent" class="form-check-input" value="south-america" type="radio"
+                        class="input-radio" checked />South America</label>
+                <label>
+                    <input name="continent" class="form-check-input" value="australia" type="radio"
+                        class="input-radio" />Australia</label>
+                <label>
+                    <input name="continent" class="form-check-input" value="eurasia" type="radio"
+                        class="input-radio" />Eurasia</label>
+                <label>
+                    <input name="continent" class="form-check-input" value="africa" type="radio"
+                        class="input-radio" />Africa</label>
+            </div>
+            <div class="form-group">
+                <p class="h4">
+                    What's your hobby?
+                    <span>(Check all that apply)</span>
+                </p>
+                <input type="checkbox" id='ski' class="form-check-input" name="hobby" value="ski" />
+                <label for="ski" class="form-check-label">Ski</label>
+                <input type="checkbox" id='jogging' class="form-check-input" name="jogging" value="jogging" />
+                <label for="jogging" class="form-check-label">Jogging</label>
+                <input type="checkbox" id='soccer' class="form-check-input" name="soccer" value="soccer" />
+                <label for="soccer" class="form-check-label">Soccer</label>
+                <input type="checkbox" id='tv' class="form-check-input" name="tv" value="tv" />
+                <label for="tv" class="form-check-label">TV</label>
+                <input type="checkbox" id='reading' class="form-check-input" name="reading" value="reading" />
+                <label for="reading" class="form-check-label">Reading</label>
+                <input type="checkbox" id='computer-game' class="form-check-input" name="computer-game" value="computer-game" />
+                <label for="computer-game" class="form-check-label">Computer Game</label>
+                <input type="checkbox" id='swimming' class="form-check-input" name="swimming" value="swimming" />
+                <label for="swimming" class="form-check-label">Swimming</label>
+                <input type="checkbox" id='tennis' class="form-check-input" name="tennis" value="tennis" />
+                <label for="tennis" class="form-check-label">Climbing</label>
+                <input type="checkbox" id='dancing' class="form-check-input" name="dancing" value="dancing" />
+                <label for="dancing" class="form-check-label">Dancing</label>
+            </div>
+
+            <div class="form-group">
+                <p class="h4 ">Describe yourself...</p>
+                <textarea class="textarea" name="description" placeholder="Text here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn btn-success btn-block">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
